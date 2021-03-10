@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+    <!-- 可打印更多的错误信息  !-->
+    <constant name="struts.devMode" value="true"></constant>
+    <!-- 自动重新加载struts的配置文件 !-->
+    <constant name="struts.configuration.xml.reload" value="true"></constant>
+    <!-- 指定请求后缀 !-->
+    <!--  <constant name="struts.action.extension" value="do,action"></constant>-->
+
+    <package name="student" namespace="/student" extends="struts-default">
+        <action name="list_*" class="com.struts.action.StudentAction" method="{1}">
+            <result name="success">/WEB-INF/student/student.jsp</result>
+        </action>
+        <action name="getStudentInformation" class="com.struts.action.StudentsAction" method="execute">
+            <result name="success">/WEB-INF/student/students.jsp</result>
+        </action>
+        <action name="getapplication_*" class="com.struts.result.ReslutApplication" method="{1}">
+            <result name="success">/WEB-INF/result/reslutApplication.jsp</result>
+        </action>
+
+
+    </package>
+
+
+</struts>

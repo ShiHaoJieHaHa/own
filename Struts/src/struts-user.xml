@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!-- 可打印更多的错误信息  !-->
+    <constant name="struts.devMode" value="true"></constant>
+    <!-- 自动重新加载struts的配置文件 !-->
+    <constant name="struts.configuration.xml.reload" value="true"></constant>
+    <!-- 指定请求后缀 !-->
+  <!--  <constant name="struts.action.extension" value="do,action"></constant>-->
+    <package extends="struts-default" name="base">
+        <global-results>
+            <result name="message">/WEB-INF/page/message.jsp</result>
+        </global-results>
+    </package>
+    <package name="struts" namespace="/test" extends="base">
+        <action name="message" class="com.struts.action.HelloWorldAction" method="execute">
+              <result name="success">/WEB-INF/page/hello.jsp</result>
+        </action>
+        <action name="me" class="com.struts.action.HelloWorldAction" method="add">
+            <result name="message">/WEB-INF/page/hello.jsp</result>
+        </action>
+
+
+        <action name="helloworld" class="com.struts.action.HelloWorldAction" method="execute">
+            <!--  <result name="success">/WEB-INF/page/hello.jsp</result>-->
+            <result type="redirect">/hi.jsp?username=${username}</result>
+        </action>
+
+        <action name="list" class="com.struts.action.HelloWorldAction" method="execute">
+            <param name="savePath">/images</param>
+            <result name="success">/WEB-INF/page/message.jsp</result>
+        </action>
+
+        <action name="it">
+            <result>/WEB-INF/page/hi.jsp</result>
+        </action>
+        <action name="redirect">
+            <result type="redirect">/hi.jsp</result>
+        </action>
+        <action name="redirectAction">
+            <result type="redirectAction">
+                <!-- <param name="actionName">xxx</param>
+                 <param name="namespace">/test</param>-->
+                helloworld
+            </result>
+        </action>
+        <action name="plainText">
+            <result type="plainText">
+                /index.jsp
+                <!--    <param name="location">/index.jsp</param>
+                    <param name="charSet">UTF-8</param>-->
+                <!--  指定读取文件的编码  -->
+            </result>
+        </action>
+    </package>
+    <package name="other" namespace="/test" extends="struts-default">
+        <action name="xxx" class="com.struts.action.HelloWorldAction" method="execute">
+            <result>/WEB-INF/page/hello.jsp</result>
+        </action>
+    </package>
+</struts>
