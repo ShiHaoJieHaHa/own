@@ -3,14 +3,14 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
+    <!-- 拦截器!-->
     <constant name="struts.i18n.encoding" value="UTF-8"/>
     <constant name="struts.devMode" value="true"></constant>
     <!-- 动态方法调用!-->
     <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
     <constant name="struts.configuration.xml.reload" value="true"></constant>
-  <!--  <constant name="struts.multipart.maxSize" value="10701096"/>-->
+    <constant name="struts.multipart.maxSize" value="10701096"/>
     <package name="interceptor" namespace="/interceptor" extends="struts-default">
-
         <interceptors>
             <interceptor name="permission" class="com.struts.interceptor.PermissionInterceptor"/>
             <interceptor-stack name="permissionStack">
