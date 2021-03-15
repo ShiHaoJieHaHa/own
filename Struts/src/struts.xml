@@ -12,6 +12,7 @@
     <include file="struts-fileUpload.xml"></include>
     <include file="struts-interceptor.xml"></include>
     <include file="struts-personal.xml"></include>
+    <include file="struts-personaotherl.xml"></include>
     <package name="demo" namespace="/demo" extends="struts-default">
         <action name="message" class="com.struts.action.HelloWorldAction" method="execute">
             <result name="success">/WEB-INF/page/hello.jsp</result>
