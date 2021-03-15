@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!-- 对action中的特定方法校验!-->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.devMode" value="true"></constant>
+    <!-- 动态方法调用!-->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+    <constant name="struts.configuration.xml.reload" value="true"></constant>
+    <constant name="struts.multipart.maxSize" value="10701096"/>
+    <package name="personalother" namespace="/personalother" extends="struts-default">
+        <action name="manger_*" class="com.struts.personal.PersonalOtherAction" method="{1}">
+         <result name="input">/loginagin.jsp</result>
+         <result name="message">/WEB-INF/personal/person.jsp</result>
+     </action>
+    </package>
+
+
+</struts>
