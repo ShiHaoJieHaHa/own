@@ -12,6 +12,10 @@
         <action name="filelist_*" class="com.struts.file.FileUploadAction" method="{1}">
             <result name="success">/WEB-INF/file/fileUpload.jsp</result>
         </action>
+        <action name="filelistAll_*" class="com.struts.file.fileUploadAllAction" method="{1}">
+            <result name="success">/WEB-INF/file/employeeAdd.jsp</result>
+        </action>
     </package>
+
 
 </struts>
