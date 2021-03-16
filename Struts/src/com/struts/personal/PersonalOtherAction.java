@@ -3,10 +3,12 @@ package com.struts.personal;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
+
 import java.util.regex.Pattern;
 
 public class PersonalOtherAction extends ActionSupport {
     private String username;
+    /*private String  brithday;*/
     private String mobile;
     public String getUsername() {
         return username;
@@ -20,6 +22,14 @@ public class PersonalOtherAction extends ActionSupport {
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
+
+  /*  public String getBrithday() {
+        return brithday;
+    }
+
+    public void setBrithday(String brithday) {
+        this.brithday = brithday;
+    }*/
 
     public String update(){
         ActionContext.getContext().put("message", "更新成功");
@@ -35,6 +45,9 @@ public class PersonalOtherAction extends ActionSupport {
         if(this.username==null || "".equals(this.username.trim())){
             this.addFieldError("username", "用户名不能为空");
         }
+        /*if(this.brithday==null || "".equals(this.brithday.trim())){
+            this.addFieldError("brithday", "生日不能为空");
+        }*/
         if(this.mobile==null || "".equals(this.mobile.trim())){
             this.addFieldError("mobile", "手机号不能为空");
         }else{
