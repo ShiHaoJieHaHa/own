@@ -11,8 +11,9 @@
   
   <body>
   <s:fielderror/>
-  <form action="${pageContext.request.contextPath}/personalother/manger_update.action" method="post">
+  <form action="${pageContext.request.contextPath}/personalother/update_update.action" method="post">
       用户名:<input type="text" name="username"/>不能为空<br/>
+      <%--生日:<input type="text" name="birthday"/>不能为空<br>--%>
       手机号:<input type="text" name="mobile"/>不能为空,并且要符合手机号的格式1,3/5/8,后面是9个数字<br/>
       <input type="submit" value="提交"/></form>
   </body>
