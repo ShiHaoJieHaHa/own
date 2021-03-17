@@ -2,7 +2,7 @@ package com.struts.xmlcheck;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-
+//对所有action的方法的xml配置  ActionName-validation.xml
 public class PersonCheckAction extends ActionSupport {
     private String username;
     private String mobile;
