@@ -14,6 +14,7 @@
     <include file="struts-personal.xml"></include>
     <include file="struts-personaotherl.xml"></include>
     <include file="struts-personalxmlcheck.xml"></include>
+    <include file="struts-personalxmlcheckother.xml"></include>
     <package name="demo" namespace="/demo" extends="struts-default">
         <action name="message" class="com.struts.action.HelloWorldAction" method="execute">
             <result name="success">/WEB-INF/page/hello.jsp</result>
