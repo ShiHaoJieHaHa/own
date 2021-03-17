@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Struts/Struts.iml" filepath="$PROJECT_DIR$/Struts/Struts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/native/native.iml" filepath="$PROJECT_DIR$/native/native.iml" />
     </modules>
   </component>
 </project>
