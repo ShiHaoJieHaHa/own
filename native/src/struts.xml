@@ -12,5 +12,8 @@
         <action name="manage" class="com.internationalization.internationalizationAction" method="execute">
             <result name="message">/WEB-INF/page/message.jsp</result>
         </action>
+        <action name="manages" class="com.internationalization.placeholderAction" method="execute">
+            <result name="message">/WEB-INF/page/message.jsp</result>
+        </action>
     </package>
 </struts>
