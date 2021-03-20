@@ -15,6 +15,7 @@
         <action name="manages" class="com.internationalization.placeholderAction" method="execute">
             <result name="message">/WEB-INF/page/message.jsp</result>
         </action>
+        <!--包范围的访问路径 !-->
         <action name="managess" class="com.internationalization.packageAction" method="execute">
             <result name="message">/WEB-INF/page/message.jsp</result>
         </action>
