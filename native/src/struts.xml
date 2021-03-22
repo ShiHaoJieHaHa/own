@@ -19,5 +19,9 @@
         <action name="managess" class="com.internationalization.packageAction" method="execute">
             <result name="message">/WEB-INF/page/message.jsp</result>
         </action>
+        <!-- Action范围的访问路径!-->
+        <action name="hold" class="com.internationalization.actionholdAction" method="execute">
+            <result name="message">/WEB-INF/page/message.jsp</result>
+        </action>
     </package>
 </struts>
