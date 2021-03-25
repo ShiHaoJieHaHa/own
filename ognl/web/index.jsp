@@ -15,6 +15,7 @@
     <title>ognl表达式</title>
   </head>
   <body>
+  <!--获取request范围里的数据 !-->
 <s:property value="#request.user"/>
   </body>
 </html>
