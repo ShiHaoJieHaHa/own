@@ -9,6 +9,7 @@
 <%@taglib uri="/struts-tags" prefix="s"%>
 <%
   request.setAttribute("user","zhangsan");
+  request.getSession().setAttribute("name","xiaoming");
 %>
 <html>
   <head>
@@ -16,6 +17,7 @@
   </head>
   <body>
   <!--获取request范围里的数据 !-->
-<s:property value="#request.user"/>
+  <s:property value="#request.user"/> <br>
+  <s:property value="#session.name"/>
   </body>
 </html>
