@@ -5,4 +5,9 @@
 <struts>
     <constant name="struts.devMode" value="true"></constant>
     <constant name="struts.configuration.xml.reload" value="true"></constant>
+<package name="ognl" namespace="/ognl" extends="struts-default">
+    <action name="list" class="com.ognl.action.ognlAction" method="execute">
+        <result name="messagelist">/WEB-INF/page/message.jsp</result>
+    </action>
+</package>
 </struts>
