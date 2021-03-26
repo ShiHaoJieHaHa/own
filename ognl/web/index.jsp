@@ -18,6 +18,11 @@
   <body>
   <!--获取request范围里的数据 !-->
   <s:property value="#request.user"/> <br>
-  <s:property value="#session.name"/>
+  <s:property value="#session.name"/><br>
+  <s:set var="list" value="{'第一个','第二个','第三个'}"/>
+<%--  <iterator迭代元素会把元素放在值栈的顶端  --%>
+  <s:iterator value="#list" >
+  <s:property /><br>
+  </s:iterator>
   </body>
 </html>
