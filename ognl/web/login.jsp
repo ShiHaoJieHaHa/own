@@ -9,7 +9,7 @@
 <%@taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>OGNL的Map写法</title>
 </head>
 <body>
 <!--  map!-->
