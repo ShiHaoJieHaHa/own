@@ -26,7 +26,7 @@
 </s:iterator>
 <s:set var="maps" value="#{'key1':'90','key2':'92'}"/>
 <s:iterator value="#maps">
-    <s:property/><br>
+    <s:property value="key"/>=<s:property value="value"/><br>
 </s:iterator>
 </body>
 </html>
