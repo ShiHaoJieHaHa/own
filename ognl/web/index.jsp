@@ -28,5 +28,12 @@
 <s:iterator value="#maps">
     <s:property value="key"/>=<s:property value="value"/><br>
 </s:iterator>
+<br>--------------------------<br>
+<s:if test="'foo' in {'foo','bar'}">
+    在
+</s:if>
+<s:else>
+    不在
+</s:else>
 </body>
 </html>
