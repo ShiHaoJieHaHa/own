@@ -9,5 +9,9 @@
     <action name="list" class="com.ognl.action.ognlAction" method="execute">
         <result name="messagelist">/WEB-INF/page/message.jsp</result>
     </action>
+
+    <action name="book" class="com.ognl.action.BookAction" method="execute">
+        <result name="success">/WEB-INF/page/book.jsp</result>
+    </action>
 </package>
 </struts>
