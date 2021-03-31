@@ -9,7 +9,7 @@
 <%@taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>ognl投影的功能</title>
 </head>
 <body>
 <s:iterator value="list.{?#this.price>60}">
