@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/native/native.iml" filepath="$PROJECT_DIR$/native/native.iml" />
       <module fileurl="file://$PROJECT_DIR$/ognl/ognl.iml" filepath="$PROJECT_DIR$/ognl/ognl.iml" />
       <module fileurl="file://$PROJECT_DIR$/other/other.iml" filepath="$PROJECT_DIR$/other/other.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tablib/tablib.iml" filepath="$PROJECT_DIR$/tablib/tablib.iml" />
     </modules>
   </component>
 </project>
