@@ -37,5 +37,7 @@
   <s:set name="myurl" value="'http://www.foshanshop.net'"/>
   <s:url value="%{#myurl}" /><br>
   <s:checkboxlist name="list" list="{'java','php','javaee','c#'}" value="{'java','javaee'}"></s:checkboxlist>
+  <br>
+  <s:checkboxlist name="map" list="#{1:'床上用品',2:'衣服',3:'鞋子'}" listKey="key" listValue="value" value="{1,2,3}"></s:checkboxlist>
   </body>
 </html>
