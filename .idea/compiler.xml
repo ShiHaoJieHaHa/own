@@ -7,12 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ssh_pojo" />
+        <module name="ssh_dao" />
+        <module name="ssh_service" />
+        <module name="ssh_web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SSH" target="1.5" />
+      <module name="ssh_dao" target="1.8" />
       <module name="ssh_demo" target="1.8" />
       <module name="ssh_pojo" target="1.8" />
+      <module name="ssh_service" target="1.8" />
+      <module name="ssh_web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
