@@ -10,6 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>ssh_pojo</module>
+        <module>ssh_service</module>
+        <module>ssh_dao</module>
+        <module>ssh_web</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
