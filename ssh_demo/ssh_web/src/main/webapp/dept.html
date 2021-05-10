@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/axios.js" type="text/javascript"></script>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="app">
+    <table border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>索引</td>
+            <td>公司名称</td>
+            <td>部门名称</td>
+            <td>修改</td>
+        </tr>
+        <tr v-for="dept in deptList">
+            <td>{{dept.id}}</td>
+            <td>{{dept.companyName}}</td>
+            <td>{{dept.deptName}}</td>
+            <td>
+                <button @click="findOne(dept.id)" type="button">修改</button>
+                <button @click="deleteOne(dept.id)" type="button">删除</button>
+            </td>
+        </tr>
+    </table>
+
+    <!-- 编辑窗口 -->
+    <div>
+        <div>
+            <div>
+                <h3>编辑</h3>
+            </div>
+            <div>
+                <table width="800px">
+                    <tr>
+                        <td>索引</td>
+                        <td><input v-model="dept.id" placeholder="索引"></td>
+                    </tr>
+                    <tr>
+                        <td>公司名称</td>
+                        <td><input v-model="dept.companyName" placeholder="公司名称"></td>
+                    </tr>
+                    <tr>
+                        <td>公司地址</td>
+                        <td><input v-model="dept.deptName" placeholder="部门名称"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" @click="save()">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/dept.js" type="text/javascript"></script>
+</body>
+</html>
