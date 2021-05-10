@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SSH" />
+        <module name="ssh_pojo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SSH" target="1.5" />
+      <module name="ssh_demo" target="1.8" />
+      <module name="ssh_pojo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
