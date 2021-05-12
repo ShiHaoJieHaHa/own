@@ -5,7 +5,7 @@ import java.util.List;
 import com.etc.dao.CustomerDAO;
 import com.etc.pojo.Customer;
 
-public class CustomerService {
+public class CustomerService  {
 	private CustomerDAO dao=new CustomerDAO();
 	public boolean login(String custname,String pwd){
 		Customer cust=dao.selectByNamePwd(custname, pwd);

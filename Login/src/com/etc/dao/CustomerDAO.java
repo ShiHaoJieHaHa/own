@@ -10,7 +10,7 @@ import java.util.List;
 import com.etc.pojo.*;
 
 public class CustomerDAO  {
-	public List<Customer> selectAll(){
+	public List<Customer> selectAll()  {
 		List<Customer> list=new ArrayList<Customer>();
 		Connection conn=Jdbc_Connnection.getConnection();
 		try {
