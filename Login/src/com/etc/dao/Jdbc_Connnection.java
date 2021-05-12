@@ -14,7 +14,7 @@ public class Jdbc_Connnection {
     static {
         //通过ResourceBundle获得文件中的信息
         ResourceBundle bundle = ResourceBundle.getBundle("/jdbc.properties");
-        //通过key值获得db文件中的配置信息
+        //通过key值获得文件中的配置信息
         driver = bundle.getString(driver);
         url = bundle.getString(url);
         username = bundle.getString(username);
