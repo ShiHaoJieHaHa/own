@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 是否启动动态方法调用
+   <constant name="struts.enable.DynamicMethodInvocation"value="false" /> -->
+
+	<!-- 开启开发者模式，作用，页面中报错信息会更加详细，默认false -->
+	<constant name="struts.devMode" value="true" />
+
+	<!-- 指定由spring负责action对象的创建（必选） -->
+	<constant name="struts.objectFactory" value="spring" />
+
+	<!-- 国际化设置，请求参数为utf-8编码（必选） -->
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<!-- 指定被struts2处理的请求后缀类型，如果有多个，用逗号隔开
+    <constant name="struts.action.extension" value="action" /> -->
+
+	<!-- 指定上传文件的大小上限
+    <constant name="struts.multipart.maxSize" value="209715200" /> -->
+
+	<!-- 当配置文件改动后是否重新加载，生产环境下需要设置为false
+    <constant name="struts.configuration.xml.reload" value="false" /> -->
+
+	<!-- 是否使用struts2的开发模式，生产环境下需要设置为false
+    <constant name="struts.devMode" value="false" /> -->
+
+	<!-- 浏览器是否缓存静态内容，生产环境下需要设置为true
+    <constant name="struts.serve.static.browserCache" value="true" /> -->
+
+	<!-- 禁用动态方法调用(即禁用xxx!add.action方式的调用，因为Struts2.1版本开始就不建议这种方式的使用) -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<package name="struts2" extends="struts-default,json-default">
+		<action name="dept_*" class="deptAction" method="{1}">
+			<allowed-methods>list,add,findOne,update,delete</allowed-methods>
+		</action>
+	</package>
+
+</struts>
