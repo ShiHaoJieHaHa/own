@@ -12,7 +12,7 @@ import com.etc.pojo.*;
 public class CustomerDAO  {
 	public List<Customer> selectAll()  {
 		List<Customer> list=new ArrayList<Customer>();
-		Connection conn=Jdbc_Connnection.getConnection();
+		Connection conn=JdbcConnection.getConnection();
 		try {
 			Statement stmt=conn.createStatement();
 			String sql="select custname,age,address from customer";
@@ -40,7 +40,7 @@ public class CustomerDAO  {
 	
 	public Customer selectByName(String custname){
 		Customer cust=null;
-		Connection conn=Jdbc_Connnection.getConnection();
+		Connection conn=JdbcConnection.getConnection();
 		String sql="select * from customer where custname=?";
 		try {
 			PreparedStatement pstmt=conn.prepareStatement(sql);
@@ -67,7 +67,7 @@ public class CustomerDAO  {
 	
 	public Customer selectByNamePwd(String custname,String pwd){
 		Customer cust=null;
-		Connection conn=Jdbc_Connnection.getConnection();
+		Connection conn=JdbcConnection.getConnection();
 		String sql="select * from customer where custname= ? and pwd=?";
 		try {
 			PreparedStatement pstmt=conn.prepareStatement(sql);
@@ -94,7 +94,7 @@ public class CustomerDAO  {
 	}
 	
 	public void insert(Customer cust){
-		Connection conn=Jdbc_Connnection.getConnection();
+		Connection conn=JdbcConnection.getConnection();
 		String sql="insert into customer values(?,?,?,?)";
 		try {
 			PreparedStatement pstmt=conn.prepareStatement(sql);

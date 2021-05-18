@@ -1,7 +1,10 @@
 package com.etc.dao;
 
 
-import java.sql.*;
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.ResourceBundle;
 
 public class Jdbc_Connnection {
@@ -13,7 +16,7 @@ public class Jdbc_Connnection {
 
     static {
         //通过ResourceBundle获得文件中的信息
-        ResourceBundle bundle = ResourceBundle.getBundle("/jdbc.properties");
+        ResourceBundle bundle = ResourceBundle.getBundle("jdbc.properties");
         //通过key值获得文件中的配置信息
         driver = bundle.getString(driver);
         url = bundle.getString(url);
@@ -22,16 +25,13 @@ public class Jdbc_Connnection {
     }
 
     public static Connection getConnection() {
-        //连接数据库
-       /* if(conn != null && !conn.isClosed())
-            return conn;*/
         try {
             if (conn != null && !conn.isClosed()) {
                 Class.forName(driver);
-                conn = DriverManager.getConnection(url, username, password);
+                conn =DriverManager.getConnection(url, username, password);
             }
-        } catch (Exception throwables) {
-            throwables.printStackTrace();
+        } catch (Exception exception) {
+            exception.printStackTrace();
         }
         return conn;
     }
