@@ -3,6 +3,8 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
+    <!-- 默认的视图主题 !-->
+    <constant name="struts.ui.theme" value="simple"></constant>
     <constant name="struts.devMode" value="true"></constant>
     <constant name="struts.configuration.xml.reload" value="true"></constant>
 <package name="tablib" namespace="/tablib" extends="struts-default">
