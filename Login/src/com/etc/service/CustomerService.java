@@ -7,7 +7,7 @@ import com.etc.pojo.Customer;
 
 public class CustomerService  {
 	private CustomerDAO dao=new CustomerDAO();
-	public boolean login(String custname,String pwd){
+	public boolean login(String custname,String pwd)  {
 		Customer cust=dao.selectByNamePwd(custname, pwd);
 		if(cust!=null){
 			return true;
@@ -16,7 +16,7 @@ public class CustomerService  {
 		}
 	}
 	
-	public boolean register(Customer cust){
+	public boolean register(Customer cust)  {
 		Customer c=dao.selectByName(cust.getCustname());
 		if(c==null){
 			dao.insert(cust);
@@ -30,11 +30,11 @@ public class CustomerService  {
 		return dao.selectByName(custname);
 	}
 	
-	public List<Customer> viewAll(){
+	public List<Customer> viewAll()  {
 		return dao.selectAll();
 	}
 	
-	public static void main(String[] args){
+	public static void main(String[] args)  {
 		CustomerService cs=new CustomerService();
 //		boolean flag=cs.login("G4ace", "123");
 //		System.out.println(flag);
