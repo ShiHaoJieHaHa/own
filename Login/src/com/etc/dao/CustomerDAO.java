@@ -12,7 +12,7 @@ import com.etc.pojo.*;
 public class CustomerDAO  {
 	public List<Customer> selectAll()  {
 		List<Customer> list=new ArrayList<Customer>();
-		Connection conn=JdbcConnection.getConnection();
+		Connection conn=BaseConnection.getCon();
 		try {
 			Statement stmt=conn.createStatement();
 			String sql="select custname,age,address from customer";
@@ -21,8 +21,7 @@ public class CustomerDAO  {
 				list.add(new Customer(rs.getString(1),null,rs.getInt(2),rs.getString(3)));
 			}
 			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
 		}finally{
 			if(conn!=null){
@@ -40,7 +39,7 @@ public class CustomerDAO  {
 	
 	public Customer selectByName(String custname){
 		Customer cust=null;
-		Connection conn=JdbcConnection.getConnection();
+		Connection conn=BaseConnection.getCon();
 		String sql="select * from customer where custname=?";
 		try {
 			PreparedStatement pstmt=conn.prepareStatement(sql);
@@ -57,7 +56,6 @@ public class CustomerDAO  {
 				try {
 					conn.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -65,9 +63,9 @@ public class CustomerDAO  {
 		return cust;
 	}
 	
-	public Customer selectByNamePwd(String custname,String pwd){
+	public Customer selectByNamePwd(String custname,String pwd)  {
 		Customer cust=null;
-		Connection conn=JdbcConnection.getConnection();
+		Connection conn=BaseConnection.getCon();
 		String sql="select * from customer where custname= ? and pwd=?";
 		try {
 			PreparedStatement pstmt=conn.prepareStatement(sql);
@@ -78,14 +76,12 @@ public class CustomerDAO  {
 				cust=new Customer(rs.getString(1),rs.getString(2),rs.getInt(3),rs.getString(4));
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
 			if(conn!=null){
 				try {
 					conn.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -93,8 +89,8 @@ public class CustomerDAO  {
 		return cust;
 	}
 	
-	public void insert(Customer cust){
-		Connection conn=JdbcConnection.getConnection();
+	public void insert(Customer cust)  {
+		Connection conn=BaseConnection.getCon();
 		String sql="insert into customer values(?,?,?,?)";
 		try {
 			PreparedStatement pstmt=conn.prepareStatement(sql);
@@ -104,14 +100,12 @@ public class CustomerDAO  {
 			pstmt.setString(4, cust.getAddress());
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
 			if(conn!=null){
 				try {
 					conn.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
