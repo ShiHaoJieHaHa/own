@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.oursnail.dao.StudentMapper" >
+  <resultMap id="BaseResultMap" type="com.oursnail.entity.Student" >
+    <id column="Sid" property="sid" jdbcType="BIGINT" />
+    <result column="Sname" property="sname" jdbcType="VARCHAR" />
+    <result column="Ssex" property="ssex" jdbcType="VARCHAR" />
+    <result column="Sbirthday" property="sbirthday" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Sid, Sname, Ssex, Sbirthday
+  </sql>
+  <select id="selectAllStudents" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from student
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from student
+    where Sid = #{sid,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from student
+    where Sid = #{sid,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.oursnail.entity.Student" >
+    insert into student (Sid, Sname, Ssex, 
+      Sbirthday)
+    values (#{sid,jdbcType=BIGINT}, #{sname,jdbcType=VARCHAR}, #{ssex,jdbcType=VARCHAR}, 
+      #{sbirthday,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.oursnail.entity.Student" >
+    insert into student
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="sid != null" >
+        Sid,
+      </if>
+      <if test="sname != null" >
+        Sname,
+      </if>
+      <if test="ssex != null" >
+        Ssex,
+      </if>
+      <if test="sbirthday != null" >
+        Sbirthday,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="sid != null" >
+        #{sid,jdbcType=BIGINT},
+      </if>
+      <if test="sname != null" >
+        #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="ssex != null" >
+        #{ssex,jdbcType=VARCHAR},
+      </if>
+      <if test="sbirthday != null" >
+        #{sbirthday,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.oursnail.entity.Student" >
+    update student
+    <set >
+      <if test="sname != null" >
+        Sname = #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="ssex != null" >
+        Ssex = #{ssex,jdbcType=VARCHAR},
+      </if>
+      <if test="sbirthday != null" >
+        Sbirthday = #{sbirthday,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where Sid = #{sid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.oursnail.entity.Student" >
+    update student
+    set Sname = #{sname,jdbcType=VARCHAR},
+      Ssex = #{ssex,jdbcType=VARCHAR},
+      Sbirthday = #{sbirthday,jdbcType=TIMESTAMP}
+    where Sid = #{sid,jdbcType=BIGINT}
+  </update>
+</mapper>
