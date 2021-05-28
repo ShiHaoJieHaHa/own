@@ -1,6 +1,6 @@
-package com.oursnail.service;
+package com.demo.service;
 
-import com.oursnail.entity.Student;
+import com.demo.entity.Student;
 
 import java.util.List;
 

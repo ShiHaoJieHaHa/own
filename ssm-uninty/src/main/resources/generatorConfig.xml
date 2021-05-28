@@ -38,7 +38,7 @@
         <!-- 必须的（1 required） -->
         <!-- java模型生成器 -->
         <!-- targetProject:自动生成代码的位置 -->
-        <javaModelGenerator targetPackage="com.oursnail.entity"
+        <javaModelGenerator targetPackage="com.demo.entity"
                             targetProject="F:\own\ssm-uninty\src\main\java"
         >
             <!-- TODO enableSubPackages:是否让schema作为包的后缀 -->
@@ -56,7 +56,7 @@
 
         <!-- 可选的（0 or 1） -->
         <!-- mapper 或者就是dao接口生成器 -->
-        <javaClientGenerator targetPackage="com.oursnail.dao"
+        <javaClientGenerator targetPackage="com.demo.dao"
                              targetProject="F:\own\ssm-uninty\src\main\java"
                              type="XMLMAPPER">
             <property name="enableSubPackages" value="true" />

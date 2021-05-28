@@ -1,6 +1,6 @@
-package com.oursnail.dao;
+package com.demo.dao;
 
-import com.oursnail.entity.Student;
+import com.demo.entity.Student;
 
 import java.util.List;
 

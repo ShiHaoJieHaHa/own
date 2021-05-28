@@ -1,7 +1,7 @@
-package com.oursnail.controller;
+package com.demo.controller;
 
-import com.oursnail.entity.Student;
-import com.oursnail.service.StudentService;
+import com.demo.entity.Student;
+import com.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

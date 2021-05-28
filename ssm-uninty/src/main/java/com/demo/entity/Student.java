@@ -1,4 +1,4 @@
-package com.oursnail.entity;
+package com.demo.entity;
 
 import java.util.Date;
 

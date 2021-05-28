@@ -1,7 +1,7 @@
-package com.oursnail.service;
+package com.demo.service;
 
-import com.oursnail.dao.StudentMapper;
-import com.oursnail.entity.Student;
+import com.demo.dao.StudentMapper;
+import com.demo.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

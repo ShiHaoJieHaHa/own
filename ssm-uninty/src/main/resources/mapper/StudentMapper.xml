@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.oursnail.dao.StudentMapper" >
-  <resultMap id="BaseResultMap" type="com.oursnail.entity.Student" >
+<mapper namespace="com.demo.dao.StudentMapper" >
+  <resultMap id="BaseResultMap" type="com.demo.entity.Student" >
     <id column="Sid" property="sid" jdbcType="BIGINT" />
     <result column="Sname" property="sname" jdbcType="VARCHAR" />
     <result column="Ssex" property="ssex" jdbcType="VARCHAR" />
@@ -25,13 +25,13 @@
     delete from student
     where Sid = #{sid,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.oursnail.entity.Student" >
+  <insert id="insert" parameterType="com.demo.entity.Student" >
     insert into student (Sid, Sname, Ssex, 
       Sbirthday)
     values (#{sid,jdbcType=BIGINT}, #{sname,jdbcType=VARCHAR}, #{ssex,jdbcType=VARCHAR}, 
       #{sbirthday,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.oursnail.entity.Student" >
+  <insert id="insertSelective" parameterType="com.demo.entity.Student" >
     insert into student
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="sid != null" >
@@ -62,7 +62,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.oursnail.entity.Student" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.entity.Student" >
     update student
     <set >
       <if test="sname != null" >
@@ -77,7 +77,7 @@
     </set>
     where Sid = #{sid,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.oursnail.entity.Student" >
+  <update id="updateByPrimaryKey" parameterType="com.demo.entity.Student" >
     update student
     set Sname = #{sname,jdbcType=VARCHAR},
       Ssex = #{ssex,jdbcType=VARCHAR},
