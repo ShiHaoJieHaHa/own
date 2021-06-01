@@ -20,7 +20,7 @@ class Production extends Thread {
     public void run() {
         for (int i = 1; i < 100; i++) {
             containter.push(new Chicken(i));
-            System.out.println("生产了i只鸡");
+            System.out.println("生产了"+i+"只鸡");
         }
     }
 }
@@ -36,7 +36,7 @@ class Production extends Thread {
     @Override
     public void run() {
         for (int i = 1; i < 100; i++) {
-            System.out.println("消费了"+containter.pop().id+"只鸡");
+            System.out.println("消费了"+containter.pop()+"只鸡");
         }
     }
 }
@@ -79,7 +79,7 @@ class SynContainter {
           }
       }
       count--;
-      Chicken  chicken=chickens[10];
+      Chicken  chicken=chickens[count];
       //通知生产者生产
         this.notifyAll();
         return chicken;
