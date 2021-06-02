@@ -1,0 +1,183 @@
+#main {
+	min-height: 480px;
+}
+.aside-li{
+	list-style: none;
+	overflow: hidden;
+	padding-left: 5px;
+	text-align: center;
+	color: #fff;
+}
+.aside-li{
+	
+    margin-top: -1px;
+}
+.aside-li .current{
+	border-bottom: 1px solid #c7c7c7;
+    border-top: 0;
+    background: #eee;
+}
+
+.aside-li a{
+	text-decoration: none;
+	display: block;
+    line-height: 50px;
+    height: 50px;
+    overflow: hidden;
+    color: #333;
+    font-size: 18px;
+}
+.aside-li .current a{
+	color: #fff;
+}
+.account-container {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ddd;
+}
+
+.account-container .thumbnail {
+	/*background: #eee;*/
+}
+
+.account-container .thumbnail img {
+	border-radius: 50%;
+}
+
+.account-container p {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+ul.nav-stacked {
+	margin-top: 15px;
+	border: solid 1px #ddd;
+}
+
+ul.nav-stacked li a {
+	text-decoration: none;
+	color: #555;
+	border: solid 1px #ddd;
+}
+
+.tab-header {
+	/*margin-top: 10px;*/
+	margin-bottom: 15px;
+	text-align: center;
+	background: lightseagreen;
+	padding: 10px;
+	color: #ffffff;
+	font-family: "FZShuti";
+	font-size: 22px;
+	border-radius: 8px;
+}
+
+.user-info {
+	padding: 30px;
+	padding-top: 10px;
+	background: #FFFFFF;
+	border-left: solid 1px #ddd;
+}
+
+.user-info>p {
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #344659;
+}
+
+.user-info>p>span {
+	display: inline-block;
+	margin-right: 30px;
+	color: #778a99;
+	min-width: 85px;
+}
+
+div.img-div {
+	display: inline-block;
+}
+
+div.img-div>img {
+	display: inline-block;
+}
+
+.a-upload {
+	margin-top: 10px;
+	padding: 5px 10px;
+	line-height: 20px;
+	position: relative;
+	cursor: pointer;
+	color: #fff;
+	background: forestgreen;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.a-upload input {
+	position: absolute;
+	font-size: 100px;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	cursor: pointer
+}
+
+.a-upload:hover {
+	color: #aaa;
+	border-color: #ddd;
+	text-decoration: none
+}
+
+.changeImg {
+	min-width: 200px;
+	/*height: 200px;*/
+	border: solid 1px #FFA07A;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.changeImg img {
+	width: 100%;
+}
+
+.changeEmail {
+	padding-top: 20px;
+}
+
+ul.dowebok {
+	list-style-type: none;
+	display: inline-block;
+	margin-left: 0;
+	padding:0;
+}
+
+ul.dowebok li {
+	display: inline-block;
+/*	margin: 5px 0;*/
+}
+#ul-radio{
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #344659;
+}
+#ul-radio>span{
+	display: inline-block;
+	margin-right: 30px;
+	color: #778a99;
+	min-width: 85px;
+}
+#auth-info-p{
+	display: inline-block;
+	margin: 0;
+	color: #778a99;
+}
+
+.error{
+		color: red;
+}
+.success{
+	color: green;
+}
