@@ -3,7 +3,7 @@ package com.demo.util;
 
 import java.util.Collections;
 import java.util.List;
-
+//分页的实体bean
 public class PageQueryBean {
     private static final int DEFAULT_PAGE_SIZE = 10;
     /** 当前页 */
