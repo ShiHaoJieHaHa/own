@@ -50,7 +50,7 @@
         <!-- 必须的（1 required） -->
         <!-- map xml 生成器 -->
         <sqlMapGenerator targetPackage="mapper"
-                         targetProject="F:\own\ssm-uninty\src\main\resources">
+                         targetProject="F:\own\SSM\src\main\resources">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
