@@ -41,7 +41,7 @@
   <s:checkboxlist name="map" list="#{1:'床上用品',2:'衣服',3:'鞋子',4:'裙子'}" listKey="key" listValue="value" value="{1,2,3}"/>
  <br>
   ...................................... <br/>
-
+  <!-- 集合存放一个bean对象   list    listkey,listvalue取的都是bean的属性  !-->
 
   </body>
 </html>
