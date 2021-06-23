@@ -1,0 +1,113 @@
+body {
+	/*background: #eee;*/
+	
+}
+/*导航栏*/
+.navbar-brand {
+	font-size: 28px;
+}
+
+.navbar .nav>li:hover .dropdown-menu {
+	display: block;
+}
+
+.navbar .nav>li:hover {
+	background: #555;
+}
+
+/*登录注册模态框*/
+#loginPane form>div, #registPane form>div {
+	margin-top: 10px;
+	;
+}
+
+#loginPane p>a, #registPane p>a {
+	text-decoration: none;
+	margin-top: 10px;
+	color: #aaa;
+}
+
+/* 消息面板 */
+/* #messagePane{
+	margin-top: 51px;
+} */
+
+/* 登录注册 */
+
+/*中间主体*/
+#main {
+	margin-top: 51px;
+	padding-top: 3px;
+	background: #FFFFFF;
+	/* min-height: 100%; */
+}
+
+/*图片轮播*/
+
+/*往期活动*/
+.activity:hover {
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*分页*/
+#pager {
+	margin-bottom: 10px;
+	position: relative;
+	top: 10px;
+}
+/*侧边栏*/
+#sidebar {
+	padding-top: 10px;
+}
+
+div.applybtn {
+	margin-bottom: 15px;
+	width: 100%;
+	padding: 10px;
+	background: lightsalmon;
+	border-radius: 5px;
+	text-align: center;
+}
+
+div.applybtn>a {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 22px;
+}
+
+div.applybtn>a:hover {
+	cursor: pointer;
+}
+
+.noticePane {
+	margin-top: 40px;
+}
+
+.noticePane h3 {
+	font-weight: 600;
+	color: #777;
+}
+
+.seemore {
+	margin-top: 10px;
+	width: 100%;
+	background: #ccc;
+	text-align: center;
+}
+
+#goTop {
+	postion: fixed;
+	width: 20px;
+	left: 50%;
+	margin-left: 401px;
+	bottom: 40px;
+}
+
+/*底部版权栏*/
+footer {
+	font-weight: 400;
+	text-align: center;
+	padding: 10px;
+	background-color: #222;
+	color: #FFFFFF;
+}
