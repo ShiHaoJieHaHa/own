@@ -83,7 +83,7 @@
     </bean>
 
     <!--链接到amq-->
-    <amq:connectionFactory id="amqConnectionFactory" brokerURL="tcp://localhost:61616" userName="admin" password="admin" />
+    <amq:connectionFactory id="amqConnectionFactory" brokerURL="tcp://http://192.168.25.153:8161/admin/" userName="admin" password="admin" />
 
     <!--
     需要在pom中添加activemq-pool配置
