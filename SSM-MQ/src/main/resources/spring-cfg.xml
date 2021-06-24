@@ -85,6 +85,16 @@
     <!--链接到amq-->
     <amq:connectionFactory id="amqConnectionFactory" brokerURL="tcp://localhost:61616" userName="admin" password="admin" />
 
+    <!--
+    需要在pom中添加activemq-pool配置
+    <bean id="connectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory">
+        <property name="connectionFactory">
+            <bean class="org.apache.activemq.ActiveMQConnectionFactory">
+                <property name="brokerURL" value="tcp://192.168.20.23:61616" />
+            </bean>
+        </property>
+    </bean>
+    -->
     <!--交给spring管理-->
     <bean id="connectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
         <property name="targetConnectionFactory" ref="amqConnectionFactory"/>
